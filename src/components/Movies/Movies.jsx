@@ -2,6 +2,7 @@ import Input from "../Input/Input"
 import "./Movies.css"
 
 const Movie = ( ) => {
+
   const style = {
     paddingLeft: "3.375rem",
     backgroundColor: "#EFF0F7",
@@ -17,7 +18,7 @@ const Movie = ( ) => {
       <div className="search-engine">
 
       <Input placeholder="Search" style={style} />
-      <button type="submit" className="btn-search">
+      <button type="submit" className="btn-search" >
         Search
       </button>
       </div>

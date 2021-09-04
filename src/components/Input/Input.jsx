@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./Input.css"
 
-const Input = ({ type, placeholder, style, onChange }) => {
+const Input = (props, { type, placeholder, style, onChange }) => {
   return (
     <div className="form-group has-search">
       <span>
@@ -14,6 +14,7 @@ const Input = ({ type, placeholder, style, onChange }) => {
       </span>
       <input
         className="form-control"
+        value={props.value}
         type={type}
         style={style}
         onChange={onChange}
