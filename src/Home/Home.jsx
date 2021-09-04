@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import MovieList from './MovieList'
-import './Home.css'
+import Movies from "../components/Movies/Movies"
+import SideBar from '../components/SideBar'
+
 
 function Home() {
   const [movies, setMovies] = useState([
@@ -34,27 +36,18 @@ function Home() {
     },
   ])
   return (
-    <div className='home'>
-      <div class="grid-container">
-        <div class="item1">Header</div>
-        <div class="item2">Menu</div>
-        <div class="item3">
-          <div class="grid-con">
-            <div class="grid-item"><MovieList movies={movies} /></div>
-            <div class="grid-item"><MovieList movies={movies} /></div>
-            <div class="grid-item"><MovieList movies={movies} /></div>
-            <div class="grid-item">4</div>
-            <div class="grid-item">5</div>
-            <div class="grid-item">6</div>
-            <div class="grid-item">7</div>
-            <div class="grid-item">8</div>
-            <div class="grid-item">9</div>
-          </div>
+    <>
+      <div className="main-page">
+        <div className="sidebar">
+          <SideBar />
         </div>
-        <div class="item5">Footer</div>
+        <div className="search-section">
+          <Movies />
+          <MovieList movies={movies} />
+        </div>
       </div>
-
-    </div>
+      
+    </>
   )
 }
 

@@ -1,5 +1,8 @@
-const Sidebar = () =>{
-  return(
+import React from 'react'
+
+function SideBar() {
+  
+  return (
     <>
     <div className="container">
       <div className="logo">
@@ -18,4 +21,5 @@ const Sidebar = () =>{
     </>
   )
 }
-export default Sidebar;
+
+export default SideBar
